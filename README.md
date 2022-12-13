@@ -1,1 +1,2 @@
 # A-text-editor
+npm i @babel/core @babel/plugin-transform-runtime @babel/preset-env @babel/runtime babel-loader css-loader html-webpack-plugin http-server style-loader webpack webpack-cli webpack-dev-server webpack-pwa-manifest workbox-webpack-plugin
