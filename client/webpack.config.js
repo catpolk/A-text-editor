@@ -22,11 +22,30 @@ module.exports = () => {
         title: 'Client Server',
         template: './index.html',
       }),
-      new WorkboxPlugin.GenerateSW(),
+      // new WorkboxPlugin.GenerateSW(),
       new InjectManifest({
-        swSrc: './src/sw.js', //entry server worker 
-        swDest: 'service-worker.js', //file that will be created -- output
+        swSrc: './src-sw.js', //entry server worker 
+        swDest: 'src-sw.js', //file that will be created -- output
       }), 
+       // Creates a manifest.json file.
+       new WebpackPwaManifest({
+        fingerprints: false,
+        inject: true,
+        name: 'Text Editor',
+        short_name: 'Editor',
+        description: 'Edit your text here!',
+        background_color: '#225ca3',
+        theme_color: '#225ca3',
+        start_url: '/',
+        publicPath: '/',
+        icons: [
+          {
+            src: path.resolve('src/images/logo.png'),
+            sizes: [96, 128, 192, 256, 384, 512],
+            destination: path.join('assets', 'icons'),
+          },
+        ],
+      }),
     ],
 
     module: {
