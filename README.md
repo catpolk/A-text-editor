@@ -1,4 +1,4 @@
-ot # <A-Text-Editor>
+# <A-Text-Editor>
 
 ## Description
  It is a single-page application: text editor that runs in the browser and functions offline.
@@ -14,3 +14,6 @@ ot # <A-Text-Editor>
 
 
 ![screeshot of the a-text-editor application](./client/images/jate.png)
+
+Github link: https://github.com/catpolk/a-text-editor
+Pages: https://catpolk.github.io/a-text-editor/
